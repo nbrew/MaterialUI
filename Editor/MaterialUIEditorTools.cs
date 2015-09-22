@@ -506,6 +506,31 @@ namespace MaterialUI
 		}
 
 
+		[MenuItem("GameObject/MaterialUI/Bottom Bar/Bottom Bar", false, 15)]
+		[MenuItem("MaterialUI/Create/Bottom Bar/Bottom Bar", false, 15)]
+		private static void CreateBottomBar()
+		{
+			theThing =
+				GameObject.Instantiate(AssetDatabase.LoadAssetAtPath("Assets/MaterialUI/ComponentPrefabs/Bottom Bar.prefab",
+				                                                     typeof (GameObject))) as GameObject;
+			SetupObject("Bottom Bar");
+			theThing.GetComponent<RectTransform>().sizeDelta = Vector2.zero;
+			theThing.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+		}
+
+		[MenuItem("GameObject/MaterialUI/Bottom Bar/Bottom Tab", false, 15)]
+		[MenuItem("MaterialUI/Create/Bottom Bar/Bottom Tab", false, 15)]
+		private static void CreateBottomTab()
+		{
+			theThing =
+				GameObject.Instantiate(AssetDatabase.LoadAssetAtPath("Assets/MaterialUI/ComponentPrefabs/Bottom Tab.prefab",
+				                                                     typeof (GameObject))) as GameObject;
+			SetupObject("Bottom Tab");
+			theThing.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+		}
+
+
+
 		[MenuItem("Component/MaterialUI/Ripple Config")]
 		[MenuItem("MaterialUI/Add Component/Ripple Config")]
 		private static void AddRippleConfig()
