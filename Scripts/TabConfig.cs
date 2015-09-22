@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-namespace MaterialUIExtended
+namespace MaterialUI
 {
 	public class TabConfig : MonoBehaviour
 	{
