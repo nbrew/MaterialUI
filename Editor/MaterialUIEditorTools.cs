@@ -482,6 +482,30 @@ namespace MaterialUI
 			theThing.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 		}
 
+		[MenuItem("GameObject/MaterialUI/Tabs/Tab Bar", false, 14)]
+		[MenuItem("MaterialUI/Create/Tabs/Tab Bar", false, 14)]
+		private static void CreateTabBar()
+		{
+			theThing =
+				GameObject.Instantiate(AssetDatabase.LoadAssetAtPath("Assets/MaterialUI/ComponentPrefabs/Tab Bar.prefab",
+				                                                     typeof (GameObject))) as GameObject;
+			SetupObject("Tab Bar");
+			theThing.GetComponent<RectTransform>().sizeDelta = Vector2.zero;
+			theThing.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+		}
+
+		[MenuItem("GameObject/MaterialUI/Tabs/Tab", false, 14)]
+		[MenuItem("MaterialUI/Create/Tabs/Tab", false, 14)]
+		private static void CreateTab()
+		{
+			theThing =
+				GameObject.Instantiate(AssetDatabase.LoadAssetAtPath("Assets/MaterialUI/ComponentPrefabs/Tab.prefab",
+				                                                     typeof (GameObject))) as GameObject;
+			SetupObject("Tab");
+			theThing.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+		}
+
+
 		[MenuItem("Component/MaterialUI/Ripple Config")]
 		[MenuItem("MaterialUI/Add Component/Ripple Config")]
 		private static void AddRippleConfig()
